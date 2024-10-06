@@ -2,7 +2,7 @@
 
 ## 1. Introduction
 This repository contains code and datasets for the paper "[Denoising-Aware Contrastive Learning for Noisy Time Series](https://arxiv.org/abs/2406.04627)" (IJCAI 2024).
-We will open-source them by the end of Sept.
+We will open-source them by the end of Oct.
 
 ## 2. Citation
 Please kindly cite the paper if you use the code or any resources in this repo:
