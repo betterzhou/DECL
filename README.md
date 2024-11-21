@@ -25,12 +25,12 @@ Please modify the 'data_path' in the code to adapt to the path of your data fold
 
 If using a few labels for training, please split data twice: one for pre-training and one for linear evaluation.
 
-We suggest setting learning_rate to small values.
-
 + python run_preprocess.py --trn_ratio 0.4 --val_ratio 0.2 --tes_ratio 0.4 --dataset PTB --seed 1 
 + python main.py --experiment_description exp1 --run_description run1 --data_path './data/' --selected_dataset PTB --seed 1 --training_mode self_supervised --lr 1e-6
 + python run_preprocess.py --trn_ratio 0.2 --val_ratio 0.1 --tes_ratio 0.4 --dataset PTB --seed 1 
 + python main.py --experiment_description exp1 --run_description run1 --data_path './data/' --selected_dataset PTB --seed 1 --training_mode train_linear --lr 1e-6
+
+We suggest setting learning_rate to small values.
 
 
 For research cooperation, please contact shuang.zhou@connect.polyu.hk
