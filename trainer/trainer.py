@@ -181,12 +181,12 @@ def model_evaluate(model, temporal_contr_model, test_dl, device, training_mode, 
         for data, labels, _,   _, _, _, _, _, _, _, _, _, _,    _, _, _, _, _, _, _, _, _, _ in test_dl:
             data, labels = data.float().to(device), labels.long().to(device)
 
-            if (training_mode == "self_supervised") or (training_mode == "SupCon"):
+            if training_mode == "self_supervised":
                 pass
             else:
                 output = model(data)
 
-            if (training_mode != "self_supervised") and (training_mode != "SupCon"):
+            if training_mode != "self_supervised":
                 predictions, features = output
                 loss = criterion(predictions, labels)
                 total_acc.append(labels.eq(predictions.detach().argmax(dim=1)).float().mean())
@@ -198,7 +198,7 @@ def model_evaluate(model, temporal_contr_model, test_dl, device, training_mode, 
                 predictions = F.softmax(predictions)
                 probs = np.append(probs, predictions.cpu().numpy(), axis=0)
     probs = probs[1:]
-    if (training_mode == "self_supervised") or (training_mode == "SupCon"):
+    if training_mode == "self_supervised":
         total_loss = 0
         total_acc = 0
         return total_loss, total_acc, [], [], []
@@ -224,13 +224,12 @@ def model_test(model, temporal_contr_model, test_dl, device, training_mode, data
         for data, labels in test_dl:
             data, labels = data.float().to(device), labels.long().to(device)
 
-            if (training_mode == "self_supervised") or (training_mode == "SupCon"):
+            if training_mode == "self_supervised":
                 pass
             else:
                 output = model(data)
 
-            # compute loss
-            if (training_mode != "self_supervised") and (training_mode != "SupCon"):
+            if training_mode != "self_supervised":
                 predictions, features = output
                 loss = criterion(predictions, labels)
                 total_acc.append(labels.eq(predictions.detach().argmax(dim=1)).float().mean())
@@ -243,11 +242,11 @@ def model_test(model, temporal_contr_model, test_dl, device, training_mode, data
                 probs = np.append(probs, predictions.cpu().numpy(), axis=0)
 
     probs = probs[1:]
-    if (training_mode == "self_supervised") or (training_mode == "SupCon"):
+    if training_mode == "self_supervised":
         total_loss = 0
         total_acc = 0
         return total_loss, total_acc, [], [], []
     else:
-        total_loss = torch.tensor(total_loss).mean()  # average loss
-        total_acc = torch.tensor(total_acc).mean()  # average acc
+        total_loss = torch.tensor(total_loss).mean()  
+        total_acc = torch.tensor(total_acc).mean()  
         return total_loss, total_acc, outs, trgs, probs
