@@ -24,6 +24,7 @@ The meta information of each time series sample is in the label.csv file.
 Please modify the 'data_path' in the code to adapt to the path of your data folder.
 
 If using a few labels for training, please split data twice: one for pre-training and one for linear evaluation.
+
 We suggest setting learning_rate to small values.
 
 + python run_preprocess.py --trn_ratio 0.4 --val_ratio 0.2 --tes_ratio 0.4 --dataset PTB --seed 1 
