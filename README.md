@@ -39,10 +39,18 @@ For research cooperation, please contact shuang.zhou@connect.polyu.hk
 ## 3. Citation
 Please kindly cite the paper if you use the code or any resources in this repo:
 ```bib
-@inproceedings{zhou2024decl,
-  title={Denoising-Aware Contrastive Learning for Noisy Time Series},
-  author={Zhou, Shuang and Zha, Daochen and Shen, Xiao and Huang, Xiao and Zhang, Rui and Chung, Fu-Lai},
-  booktitle={International Joint Conference on Artificial Intelligence (IJCAI)},
-  year={2024},
+@inproceedings{ijcai2024p624,
+  title     = {Denoising-Aware Contrastive Learning for Noisy Time Series},
+  author    = {Zhou, Shuang and Zha, Daochen and Shen, Xiao and Huang, Xiao and Zhang, Rui and Chung, Korris},
+  booktitle = {Proceedings of the Thirty-Third International Joint Conference on
+               Artificial Intelligence, {IJCAI-24}},
+  publisher = {International Joint Conferences on Artificial Intelligence Organization},
+  editor    = {Kate Larson},
+  pages     = {5644--5652},
+  year      = {2024},
+  month     = {8},
+  note      = {Main Track},
+  doi       = {10.24963/ijcai.2024/624},
+  url       = {https://doi.org/10.24963/ijcai.2024/624},
 }
 ```
