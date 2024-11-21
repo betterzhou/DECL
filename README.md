@@ -1,7 +1,7 @@
 # Denoising-Aware Contrastive Learning for Noisy Time Series (DECL)
 
 ## 1. Introduction
-This repository contains code and datasets for the paper "[Denoising-Aware Contrastive Learning for Noisy Time Series](https://www.ijcai.org/proceedings/2024/0624.pdf)" (IJCAI 2024).
+This repository contains code for the paper "[Denoising-Aware Contrastive Learning for Noisy Time Series](https://www.ijcai.org/proceedings/2024/0624.pdf)" (IJCAI 2024).
 
 
 ## 2. Usage
