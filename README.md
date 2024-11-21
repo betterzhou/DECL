@@ -15,7 +15,7 @@ See requirements.txt for details.
 ### Datasets:
 The code assumes that the data has been augmented and saved into the data folder.
 
-For example, the folder of ./PTB/ contains all the raw data, the folder of ./PTB_denoise1/ contains all the denoised data using the denoiser method m1, the folder of ./PTB_noisy1/ contains all the noise-enhanced data corresponding to denoiser method m1, and the folder of ./PTB_Gaussian/ contains all the data induced with Gaussian noise.
+For example, the folder of ./PTB/ contains all the raw data, the folder of ./PTB_denoise1/ contains all the denoised data using the denoiser m1, the folder of ./PTB_noisy1/ contains all the noise-enhanced data corresponding to denoiser m1, and the folder of ./PTB_Gaussian/ contains all the data induced with Gaussian noise.
 
 The meta information of each time series sample is in the label.csv file.
 
