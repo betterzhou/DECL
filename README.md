@@ -33,7 +33,7 @@ If using a few labels for training, please split data twice: one for pre-trainin
 We suggest setting learning_rate to small values.
 
 
-For research cooperation, please contact shuang.zhou@connect.polyu.hk
+For research cooperation, please contact shuang DOT zhou AT connect.polyu.hk
 
 
 ## 3. Citation
